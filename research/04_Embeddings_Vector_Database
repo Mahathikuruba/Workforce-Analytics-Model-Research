@@ -1,0 +1,58 @@
+# 4. Embeddings and Vector Database Research
+
+## What are embeddings?
+
+Embeddings are numerical vector representations of text. Texts with similar meanings can have similar vector representations even when they do not use exactly the same words.
+
+For example:
+
+- `employee resignation policy`
+- `rules for leaving the company`
+
+may be semantically similar.
+
+## Why embeddings are needed
+
+Keyword search may fail when the wording of a question differs from the wording in a document. Embeddings support semantic similarity search, which is useful for RAG.
+
+## What is a vector database?
+
+A vector database stores embeddings and supports similarity search. Technologies that can be used for prototypes include:
+
+- FAISS
+- Chroma
+- Pinecone
+- Weaviate
+- Milvus
+
+For an academic prototype, FAISS or Chroma can be considered because they are straightforward options for retrieval pipelines.
+
+## Workflow
+
+```text
+HR Document
+   ↓
+Split into chunks
+   ↓
+Embedding model
+   ↓
+Vector representation
+   ↓
+Vector database
+
+User question
+   ↓
+Embedding model
+   ↓
+Query vector
+   ↓
+Similarity search
+   ↓
+Top relevant chunks
+   ↓
+LLM
+```
+
+## Important distinction
+
+Embeddings do not generate the final answer. They help the system find semantically relevant information. The LLM uses the retrieved information to produce the natural-language response.
