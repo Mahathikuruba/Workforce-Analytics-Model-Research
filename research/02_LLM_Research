@@ -1,0 +1,44 @@
+# 2. Large Language Model (LLM) Research
+
+## What is an LLM?
+
+A Large Language Model is a neural language model capable of understanding and generating natural-language text. Modern LLM systems are strongly associated with the Transformer architecture.
+
+The Transformer architecture was introduced by Vaswani et al. in **Attention Is All You Need (2017)**.
+
+## Why use an LLM in this project?
+
+A traditional dashboard requires users to select filters, charts or predefined reports. An LLM can provide a natural-language interface so HR users can ask questions conversationally.
+
+### Example
+
+HR user:
+
+> Which department has the highest attrition?
+
+The system can interpret the question, request the required analytical result and explain it in natural language.
+
+Another example:
+
+> What factors are associated with attrition among employees working overtime?
+
+The AI layer can combine verified analytics and model outputs and present them in an HR-friendly response.
+
+## Proposed LLM responsibilities
+
+1. Understand natural-language workforce questions.
+2. Determine which tools or information sources are required.
+3. Summarize SQL results.
+4. Explain machine-learning predictions.
+5. Convert technical results into understandable business language.
+6. Generate recommendations using verified evidence.
+
+## Important design principle
+
+The LLM should not invent workforce statistics. Numerical answers should come from the SQL or analytics tools. Organization-specific policy answers should be grounded in retrieved HR documents through RAG.
+
+This design reduces unsupported or hallucinated answers.
+
+## Reference
+
+Vaswani, A. et al. (2017), *Attention Is All You Need*.
