@@ -1,0 +1,68 @@
+# 7. Research Gap and Proposed Methodology
+
+## Research gap
+
+Traditional workforce dashboards mainly provide descriptive information such as headcount, salary, department distribution and historical attrition.
+
+Standalone machine-learning systems can predict attrition but may provide limited interaction for non-technical HR users.
+
+Conversational LLM systems can answer questions, but without grounding they may produce unsupported information.
+
+The proposed project addresses these limitations by integrating:
+
+1. Descriptive workforce analytics
+2. Predictive attrition modeling
+3. Explainable AI
+4. Organization-specific RAG
+5. Natural-language interaction
+6. Agentic tool coordination
+
+## Proposed methodology
+
+### Phase 1 — Data Layer
+
+Collect and structure employee/workforce data.
+
+### Phase 2 — SQL Analytics
+
+Store structured data and calculate workforce metrics.
+
+### Phase 3 — Python Analytics
+
+Perform preprocessing, exploratory analysis and visualization.
+
+### Phase 4 — Predictive Modeling
+
+Train and compare classification models for attrition prediction.
+
+### Phase 5 — Explainability
+
+Use feature importance and/or SHAP to explain model predictions.
+
+### Phase 6 — Knowledge Layer
+
+Collect approved HR documents and build a RAG knowledge base.
+
+### Phase 7 — Conversational Layer
+
+Use an LLM to understand natural-language questions and summarize verified results.
+
+### Phase 8 — Agentic Layer
+
+Create specialized workflows for SQL, ML prediction and RAG.
+
+### Phase 9 — Dashboard
+
+Present KPIs, trends, attrition risk, explanations and AI-assisted recommendations.
+
+## Proposed outcome
+
+A user should be able to move from a simple question such as:
+
+> Show me attrition by department.
+
+Toward a richer question such as:
+
+> Why is attrition high in Sales, what factors are associated with the risk, and what does the relevant HR policy recommend?
+
+The second type of question requires the integrated architecture proposed in this project.
