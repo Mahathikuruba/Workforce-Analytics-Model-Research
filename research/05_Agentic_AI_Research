@@ -1,0 +1,75 @@
+# 5. Agentic AI Workflow Research
+
+## What is Agentic AI?
+
+Agentic AI refers to systems designed to perform multi-step tasks by selecting and coordinating tools, actions or sub-processes to achieve a goal.
+
+For this project, the agent layer is proposed as an orchestration mechanism between the HR user and the analytics/knowledge tools.
+
+## Proposed agents
+
+### 1. Analytics Agent
+
+**Purpose:** work with structured workforce data.
+
+**Tool:** SQL database.
+
+Tasks:
+- employee counts,
+- department metrics,
+- attrition rates,
+- salary averages,
+- workforce trends.
+
+### 2. Prediction Agent
+
+**Purpose:** use the trained machine-learning model.
+
+**Tool:** Python ML model.
+
+Tasks:
+- estimate attrition probability,
+- classify risk,
+- return model explanations.
+
+### 3. HR Knowledge Agent
+
+**Purpose:** retrieve relevant company information.
+
+**Tool:** RAG pipeline.
+
+Tasks:
+- search HR policies,
+- retrieve relevant document sections,
+- provide evidence to the LLM.
+
+### 4. Recommendation/Response Agent
+
+**Purpose:** combine verified outputs and prepare an HR-friendly response.
+
+**Tool:** LLM.
+
+## Example workflow
+
+User:
+
+> Attrition is high in Sales. Why, and what can HR do?
+
+Proposed workflow:
+
+1. Receive the natural-language question.
+2. Identify the required workforce metrics.
+3. Analytics Agent queries SQL.
+4. Prediction Agent provides relevant model information.
+5. HR Knowledge Agent retrieves relevant HR policies.
+6. LLM combines the verified context.
+7. The response is presented to the HR user.
+8. The dashboard displays the findings and recommendations.
+
+## Why agents add value
+
+A simple chatbot mainly responds to text. An agentic workforce assistant can coordinate SQL analytics, ML prediction, document retrieval and LLM response generation.
+
+## Governance
+
+Because this is an HR application, the system should be treated as decision support rather than an automatic employment decision maker. Employee information should be protected, recommendations should be reviewable by HR, and model performance and potential bias should be monitored.
