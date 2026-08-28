@@ -1,0 +1,35 @@
+# 6. Technology Comparison
+
+| Technology | Main purpose | Input | Output |
+|---|---|---|---|
+| Logistic Regression | Baseline classification | Employee features | Attrition prediction |
+| Decision Tree | Interpretable classification | Employee features | Prediction + decision rules |
+| Random Forest | Robust tabular prediction | Employee features | Attrition prediction + feature importance |
+| Gradient Boosting | Strong tabular prediction | Employee features | Attrition prediction |
+| SHAP | Explain ML predictions | Model + features | Feature contributions |
+| LLM | Natural-language interaction | Question + context | Natural-language answer |
+| Embeddings | Semantic representation | Text | Vectors |
+| Vector Database | Similarity retrieval | Vectors | Relevant document chunks |
+| RAG | Ground LLM with external knowledge | Question + documents | Evidence-grounded context |
+| Agentic Workflow | Coordinate tools | User goal | Multi-step result |
+| Dashboard | Decision support | Analytics + AI outputs | Interactive insights |
+
+## Why combine them?
+
+**SQL** provides reliable structured workforce analytics.
+
+**Python + ML** provides attrition prediction.
+
+**SHAP** helps explain predictions.
+
+**Embeddings + vector search** retrieve relevant document content.
+
+**RAG** provides organization-specific knowledge to the LLM.
+
+**LLM** provides natural-language interaction and summarization.
+
+**Agents** coordinate the different tools.
+
+**Dashboard** presents the resulting intelligence to HR users.
+
+The value comes from integrating these components rather than claiming that an individual algorithm is completely new.
