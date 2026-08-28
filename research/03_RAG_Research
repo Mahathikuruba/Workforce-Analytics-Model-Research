@@ -1,0 +1,72 @@
+# 3. Retrieval-Augmented Generation (RAG) Research
+
+## What is RAG?
+
+RAG stands for **Retrieval-Augmented Generation**. It combines information retrieval with language generation.
+
+Instead of depending only on information stored inside an LLM, the system retrieves relevant external information and provides it as context to the model before generating a response.
+
+A foundational paper is Lewis et al. (2020), *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*.
+
+## Why RAG is useful for HR
+
+Organizations may have private and changing documents such as:
+
+- Employee handbook
+- Leave policy
+- Training policy
+- Promotion policy
+- Benefits policy
+- Performance-management guidelines
+- Recruitment guidelines
+
+An LLM's general knowledge is not a reliable source for these organization-specific rules. RAG allows the system to retrieve the relevant current document content.
+
+## RAG pipeline
+
+```text
+HR Documents
+     ↓
+Document Loading
+     ↓
+Text Extraction
+     ↓
+Chunking
+     ↓
+Embeddings
+     ↓
+Vector Database
+     ↓
+Similarity Search
+     ↓
+Relevant Chunks
+     ↓
+LLM
+     ↓
+Grounded Answer
+```
+
+## Example
+
+User:
+
+> What does the company policy say about training reimbursement?
+
+The system searches the HR knowledge base, retrieves the relevant policy section, gives that context to the LLM and generates a concise answer based on the retrieved evidence.
+
+## Why RAG instead of relying only on an LLM?
+
+Company policies can be private and can change. RAG keeps organizational knowledge outside the model and makes it easier to update documents without retraining the language model for every policy change.
+
+## Limitations
+
+RAG quality depends on:
+
+- document quality,
+- chunking strategy,
+- embedding quality,
+- retrieval quality,
+- prompt design, and
+- freshness of the knowledge base.
+
+Therefore, retrieval quality should be evaluated rather than assumed to be correct.
